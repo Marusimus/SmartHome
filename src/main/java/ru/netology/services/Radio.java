@@ -3,7 +3,8 @@ package ru.netology.services;
 public class Radio {
 
     private int currentVolume;
-    public int getCurrentVolume(){
+
+    public int getCurrentVolume() {
         return currentVolume;
     }
 
@@ -28,8 +29,8 @@ public class Radio {
 
 
     public void reduceVolume() {
-        if (currentVolume > 0 ) {
-            currentVolume = currentVolume + 1;
+        if (currentVolume > 0) {
+            currentVolume = currentVolume - 1;
         } else {
             currentVolume = 0;
         }
@@ -37,11 +38,12 @@ public class Radio {
     }
 
 
-
     private int currentRadiostationNumber;
-    public int getCurrentRadiostationNumber(){
+
+    public int getCurrentRadiostationNumber() {
         return currentRadiostationNumber;
     }
+
     public void setCurrentRadiostationNumber(int currentRadiostationNumber) {
         if (currentRadiostationNumber > 9) {
             return;
@@ -54,15 +56,15 @@ public class Radio {
 
 
     public void increaseRadiostationNumber() {
-        if (currentRadiostationNumber < 9) {
+        if (currentRadiostationNumber != 9) {
             currentRadiostationNumber = currentRadiostationNumber + 1;
-        }  else  {
+        } else {
             currentRadiostationNumber = 0;
         }
     }
 
     public void reduceRadiostationNumber() {
-        if (currentRadiostationNumber > 0) {
+        if (currentRadiostationNumber != 0) {
             currentRadiostationNumber = currentRadiostationNumber - 1;
         } else {
             currentRadiostationNumber = 9;
