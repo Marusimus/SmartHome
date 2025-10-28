@@ -20,6 +20,17 @@ class RadioTest {
     }
 
     @Test
+    public void chooseCountMoreThanDefault() {
+        Radio radio = new Radio(25);
+        radio.setCurrentRadiostationNumber(20);
+
+        int expected = 20;
+        int actual = radio.getCurrentRadiostationNumber();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldNotSetRadiostationNumber() {
         Radio radio = new Radio();
         radio.setCurrentRadiostationNumber(75);
